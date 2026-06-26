@@ -394,7 +394,7 @@ p {
 .testimonial-card {
   border: 1px solid var(--border);
   padding: 35px;
-  border-radius: 18px;
+  border-radius: 18px 0px 18px 0px ;
 }
 
 .featured {
@@ -436,6 +436,7 @@ p {
 .service-item:hover {
   transform: translateX(5px);
 }
+
 
 /* =========================
    FEATURES
@@ -492,7 +493,7 @@ p {
   background: var(--primary);
   color: white;
 
-  border-radius: 24px;
+  border-radius: 20px 0px 20px 0px;
 
   padding: 60px;
 
@@ -525,6 +526,7 @@ p {
 
 .cta-image img {
   border-radius: 20px;
+  margin-left:120px;
 }
 
 /* =========================
@@ -744,4 +746,72 @@ p {
 
 .nav-links a:hover::after {
   width: 100%;
+}
+
+@media (max-width: 1024px) {
+
+  .testimonials .testimonial-grid {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .testimonials .card {
+    flex: 1 1 45%;
+  }
+
+  .cta .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta img {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .cta .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .cta .cta-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .cta .cta-image img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 320px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .testimonials .card {
+    padding: 16px;
+  }
+
+  .cta h1 {
+    font-size: 20px;
+  }
 }
